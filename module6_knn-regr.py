@@ -30,8 +30,8 @@ def main():
 
     print(f"Next, provide {user_input_N} pairs of numbers")
 
-    x_values = []
-    y_values = []
+    x_values = np.zeros(user_input_N)
+    y_values = np.zeros(user_input_N)
 
     # Get x,y pairs
     for i in range(user_input_N):
@@ -39,7 +39,7 @@ def main():
             user_input = input(
                 f"Enter a number as the first value, need {user_input_N-i} more pairs: ")
             if is_number(user_input):
-                x_values.append(float(user_input))
+                x_values[i] = float(user_input)
                 break
             else:
                 print("That did not work")
@@ -48,7 +48,7 @@ def main():
             user_input = input(
                 f"Enter a number as the second value, need {user_input_N-i} more pairs: ")
             if is_number(user_input):
-                y_values.append(float(user_input))
+                y_values[i] = float(user_input)
                 break
             else:
                 print("That did not work")
