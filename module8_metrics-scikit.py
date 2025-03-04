@@ -1,6 +1,4 @@
 import numpy as np
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import precision_score, recall_score
 
 
